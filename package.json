@@ -1,0 +1,9 @@
+{
+	"name": "yodawg",
+	"description": "An open-source software recommender system",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "3.x"
+	}
+}
