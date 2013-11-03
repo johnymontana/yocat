@@ -116,16 +116,14 @@
     return that
   }
   $(document).ready(function() {
-    var sys=arbor.ParticleSystem(1000, 600, 0.5);
+    sys=arbor.ParticleSystem(500, 600, 0.5);
     sys.parameters({gravity: true});
     sys.renderer = Renderer('#viewport');
 
-    sys.addEdge('a', 'b');
-    sys.addEdge('a', 'c');
-    sys.addEdge('a', 'd');
-    sys.addEdge('a', 'e');
-    sys.addNode('f', {alone:true, mass:0.25});
-
-    
+    $('#clickme').click(function() {
+        $.getJSON('fetch/WatchEvent/walterra/retire.js', function(d) {
+            sys.graft(d.graph);
+        });
+    });
   });
 })(this.jQuery);
