@@ -123,12 +123,12 @@
 
     $('#clickme').click(function() {
         $.getJSON('fetch/WatchEvent/walterra/retire.js', function(d) {
-            sys.graft(d.graph);
+            sys.merge(d.graph);
         });
     });
     $('#clickme2').click(function() {
         $.getJSON('fetch/WatchEvent/max-m/bootstrap', function(d) {
-            sys.graft(d.graph);
+            sys.merge(d.graph);
         });
     });
   });
