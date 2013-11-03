@@ -122,17 +122,16 @@
     sys.renderer = Renderer('#viewport');
 
     $('#clickme').click(function() {
-        var self = this;
         $.getJSON('fetch/WatchEvent/walterra/retire.js', function(d) {
             sys.merge(d.graph);
-            self.addClass('active');
+            $('#clickme').addClass('active');
             $('#clickme2').removeClass('active');
         });
     });
     $('#clickme2').click(function() {
         $.getJSON('fetch/WatchEvent/max-m/bootstrap', function(d) {
             sys.merge(d.graph);
-            self.addClass('active');
+            $('#clickme2').addClass('active');
             $('#clickme').removeClass('active');
         });
     });
