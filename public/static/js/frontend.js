@@ -56,7 +56,7 @@
           // pt:   {x:#, y:#}  node position in screen coords
 
           // draw a rectangle centered at pt
-          var w = 10
+          var w = 30
           ctx.fillStyle = (node.data.alone) ? "orange" : "black"
           ctx.fillRect(pt.x-w/2, pt.y-w/2, w,w)
         })                            
@@ -122,6 +122,11 @@
 
     $('#clickme').click(function() {
         $.getJSON('fetch/WatchEvent/walterra/retire.js', function(d) {
+            sys.graft(d.graph);
+        });
+    });
+    $('#clickme2').click(function() {
+        $.getJSON('fetch/WatchEvent/max-m/bootstrap', function(d) {
             sys.graft(d.graph);
         });
     });
